@@ -3,7 +3,7 @@ import { Text, View, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
 
-export const Details = () => {
+export const Home = () => {
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
@@ -13,13 +13,12 @@ export const Details = () => {
   }, []);
 
   return (
-    <View>
-      <Text>Details Screen</Text>
+    <View className='flex-1 items-center justify-center bg-yellow-300'>
+      <Text>Home Screen</Text>
       <Button
-        title='Go to Home'
-        onPress={() => navigation.navigate('Home' as never)}
+        title='Go to Details'
+        onPress={() => navigation.navigate('Details' as never)}
       />
-      <Button title='Go back' onPress={() => navigation.goBack()} />
     </View>
   );
 };
