@@ -3,8 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
 import { Home } from './src/screens/Home';
-import { Details } from './src/screens/Details';
-import { Profile } from './src/screens/Profile';
+import { Advices } from './src/screens/Advices';
+import { Saved } from './src/screens/Saved';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,8 +13,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         <Stack.Screen name='Home' component={Home} />
-        <Stack.Screen name='Details' component={Details} />
-        <Stack.Screen name='Profile' component={Profile} />
+        <Stack.Screen name='Advices' component={Advices} />
+        <Stack.Screen name='Saved' component={Saved} />
       </Stack.Navigator>
     </NavigationContainer>
   );

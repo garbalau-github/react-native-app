@@ -13,7 +13,7 @@ export const Home = () => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerShown: false,
+      // headerShown: false,
     });
   }, []);
 

@@ -13,7 +13,7 @@ import { useAdvice } from '../hooks/useAdvice';
 import { Heading } from '../components/Heading';
 import { Jumbotron } from '../components/Jumbotron';
 
-export const Details = () => {
+export const Advices = () => {
   const navigation = useNavigation();
   const { advice, fetchAdvice } = useAdvice();
   const { advices, addAdvice } = useAdviceStore();
@@ -29,19 +29,24 @@ export const Details = () => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerShown: false,
+      // headerShown: false,
     });
   }, []);
 
   return (
     <SafeAreaView className='bg-white flex-1 relative'>
-      <Heading page='Details' />
-      <Jumbotron title='Advice' text='Get your advice now' />
-      <Button title='Load more' onPress={fetchAdvice} />
-      <Button
-        title='Saved'
-        onPress={() => navigation.navigate('Profile' as never)}
+      <View className='flex-row justify-between text-center'>
+        <Heading page='Details' />
+        <Button
+          title='Saved'
+          onPress={() => navigation.navigate('Profile' as never)}
+        />
+      </View>
+      <Jumbotron
+        // title='Advices'
+        text='Get your daily portion of advices right now!'
       />
+      <Button title='Load more' onPress={fetchAdvice} />
       <View className='flex-1 relative items-center justify-center'>
         {advice && (
           <View className='flex-1 relative items-center justify-center'>
@@ -49,7 +54,7 @@ export const Details = () => {
           </View>
         )}
         {checkIfAdviceExists(advice) ? (
-          <Text className='text-lg'>Advice saved</Text>
+          <Text className='text-lg text-purple-800'>Saved</Text>
         ) : (
           <Button title='Save advice' onPress={saveAdvice} />
         )}
