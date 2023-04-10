@@ -27,7 +27,7 @@ export const Saved = () => {
       <Heading page='Profile' />
       <Jumbotron
         // title='Profile'
-        text='You can find saved advices here'
+        text='Words of wisdom - saved and ready when you need them.'
       />
       <Text className='text-lg font-semibold'>
         Saved {advices.length} advices

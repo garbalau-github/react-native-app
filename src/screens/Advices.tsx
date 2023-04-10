@@ -1,4 +1,4 @@
-import { Text, Button, View, SafeAreaView } from 'react-native';
+import { Text, Button, View, SafeAreaView, TextInput } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 import { useLayoutEffect } from 'react';
@@ -23,7 +23,6 @@ export const Advices = () => {
   };
 
   const saveAdvice = () => {
-    console.log(advice);
     addAdvice(advice);
   };
 
@@ -36,10 +35,10 @@ export const Advices = () => {
   return (
     <SafeAreaView className='bg-white flex-1 relative'>
       <View className='flex-row justify-between text-center'>
-        <Heading page='Details' />
+        <Heading page='Advices' />
         <Button
           title='Saved'
-          onPress={() => navigation.navigate('Profile' as never)}
+          onPress={() => navigation.navigate('Saved' as never)}
         />
       </View>
       <Jumbotron
@@ -47,8 +46,13 @@ export const Advices = () => {
         text='Get your daily portion of advices right now!'
       />
       <Button title='Load more' onPress={fetchAdvice} />
+      <Text>Looking for specific advice?</Text>
+      <Button
+        title='Load more'
+        onPress={() => navigation.navigate('SearchAdvices' as never)}
+      />
       <View className='flex-1 relative items-center justify-center'>
-        {advice && (
+        {advice.slip && (
           <View className='flex-1 relative items-center justify-center'>
             <Text className='text-3xl font-semibold'>{advice.slip.advice}</Text>
           </View>

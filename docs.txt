@@ -1,2 +1,21 @@
 Random Advice - https://api.adviceslip.com/advice
 Advice By Query - https://api.adviceslip.com/advice/search/{query}
+
+
+Marketing Slogans
+
+"Save wisdom for later - with our advice saving app!"
+"Don't lose great advice - save it with ease!"
+"Advice worth keeping - our app makes it easy!"
+"Remember this - for when you need it most!"
+"Keep this advice close - it could change your life!"
+"Words of wisdom - saved and ready when you need them!"
+"Your personal library of inspiration!"
+"A treasure trove of great advice - all in one place!"
+"Wise words, one tap away - thanks to our app!"
+"Save advice, change your life!"
+"Collect wisdom, unleash potential!"
+"The ultimate advice repository!"
+"Never forget a great idea again!"
+"Smart advice storage - always at your fingertips!"
+"Advice worth keeping - forever in your pocket!"

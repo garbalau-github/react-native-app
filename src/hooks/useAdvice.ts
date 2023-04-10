@@ -22,7 +22,6 @@ export const useAdvice = () => {
 
   useEffect(() => {
     fetchAdvice();
-    console.log(`Fetched: ${advice}`);
   }, []);
 
   return {

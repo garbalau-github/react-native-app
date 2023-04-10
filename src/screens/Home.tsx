@@ -19,13 +19,16 @@ export const Home = () => {
 
   return (
     <SafeAreaView className='bg-white flex-1 relative'>
-      <Heading page='Home' />
-      <Jumbotron title='Welcome' text='Hello, hello' />
+      {/* <Heading page='Home' /> */}
+      <Jumbotron
+        title='Welcome'
+        text='Save wisdom for later - with our advice saving app!'
+      />
       <View className='w-[350px] h-[350px] bg-teal-300 rounded-full absolute bottom-36 -right-36'></View>
       <View className='w-[350px] h-[350px] bg-purple-300 rounded-full absolute -bottom-28 -left-36'></View>
       <View className='flex-1 relative items-center justify-center'>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Details' as never)}
+          onPress={() => navigation.navigate('Advices' as never)}
           className='absolute bottom-20 w-24 h-24 rounded-full items-center justify-center'
         >
           <Animatable.View
