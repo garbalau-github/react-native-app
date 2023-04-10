@@ -1,0 +1,2 @@
+Random Advice - https://api.adviceslip.com/advice
+Advice By Query - https://api.adviceslip.com/advice/search/{query}

@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native';
 
 type JumbotronProps = {
-  title: string;
-  text: string;
+  title?: string;
+  text?: string;
 };
 
 export const Jumbotron = ({ title, text }: JumbotronProps) => {
